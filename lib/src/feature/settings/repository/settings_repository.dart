@@ -1,7 +1,7 @@
-import 'package:pure/pure.dart';
 import 'package:ai_client/src/feature/settings/database/settings_dao.dart';
 import 'package:ai_client/src/feature/settings/enum/app_theme.dart';
 import 'package:ai_client/src/feature/settings/model/settings_data.dart';
+import 'package:pure/pure.dart';
 
 abstract class ISettingsRepository {
   SettingsData currentData();

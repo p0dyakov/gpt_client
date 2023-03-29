@@ -1,9 +1,9 @@
-import 'package:dio/dio.dart';
 import 'package:ai_client/src/core/database/drift/app_database.dart';
 import 'package:ai_client/src/core/di/app_dependencies.dart';
 import 'package:ai_client/src/core/di/shared_parent.dart';
 import 'package:ai_client/src/feature/app/api/dio_logger_interceptor.dart';
 import 'package:ai_client/src/feature/app/database/app_preferences_driver_observer.dart';
+import 'package:dio/dio.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:typed_preferences/typed_preferences.dart';
 

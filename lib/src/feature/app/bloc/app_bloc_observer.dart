@@ -1,8 +1,8 @@
 // ignore_for_file: avoid-dynamic
 
-import 'package:mark/mark.dart';
 import 'package:ai_client/src/core/di/shared_parent.dart';
 import 'package:ai_client/src/core/logic/identity_logging_mixin.dart';
+import 'package:mark/mark.dart';
 import 'package:stream_bloc/stream_bloc.dart';
 
 extension on StringBuffer {

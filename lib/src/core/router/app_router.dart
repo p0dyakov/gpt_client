@@ -11,16 +11,3 @@ part 'app_router.gr.dart';
   ],
 )
 class AppRouter extends _$AppRouter {}
-
-// class PlaceholderPage extends StatelessWidget {
-//   const PlaceholderPage({
-//     super.key,
-//   });
-
-//   @override
-//   Widget build(BuildContext context) => const Scaffold(
-//         body: Center(
-//           child: Text('Placeholder page'),
-//         ),
-//       );
-// }

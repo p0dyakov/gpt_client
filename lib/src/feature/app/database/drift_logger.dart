@@ -1,7 +1,7 @@
-import 'package:flutter/foundation.dart';
-import 'package:mark/mark.dart';
 import 'package:ai_client/src/core/di/shared_parent.dart';
 import 'package:ai_client/src/core/logic/identity_logging_mixin.dart';
+import 'package:flutter/foundation.dart';
+import 'package:mark/mark.dart';
 
 abstract class IDriftLogger {
   static const bool shouldLog = !kReleaseMode;

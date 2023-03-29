@@ -1,10 +1,10 @@
 // ignore_for_file: avoid-dynamic
 
+import 'package:ai_client/src/core/di/shared_parent.dart';
+import 'package:ai_client/src/core/logic/identity_logging_mixin.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/widgets.dart';
 import 'package:mark/mark.dart';
-import 'package:ai_client/src/core/di/shared_parent.dart';
-import 'package:ai_client/src/core/logic/identity_logging_mixin.dart';
 
 abstract class LoggerNavigationObserverDependencies
     implements LoggerDependency {}

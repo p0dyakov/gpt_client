@@ -1,10 +1,10 @@
 import 'dart:async';
 
-import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:pure/pure.dart';
 import 'package:ai_client/src/core/extension/extensions.dart';
 import 'package:ai_client/src/core/extension/src/stream.dart';
 import 'package:ai_client/src/core/repository/configuration_repository.dart';
+import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:pure/pure.dart';
 import 'package:select_annotation/select_annotation.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:shared_preferences/shared_preferences.dart';

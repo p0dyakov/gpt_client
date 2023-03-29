@@ -1,8 +1,8 @@
+import 'package:ai_client/src/core/di/app_dependencies.dart';
+import 'package:ai_client/src/core/gen/l10n/app_localizations.g.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_arbor/flutter_arbor.dart';
 import 'package:mark/mark.dart';
-import 'package:ai_client/src/core/di/app_dependencies.dart';
-import 'package:ai_client/src/core/gen/l10n/app_localizations.g.dart';
 
 extension BuildContextX on BuildContext {
   AppDependencies get _appDependencies => NodeScope.of<AppDependencies>(

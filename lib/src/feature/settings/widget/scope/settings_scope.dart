@@ -1,10 +1,10 @@
-import 'package:flutter/material.dart';
-import 'package:flutter_bloc/flutter_bloc.dart';
-import 'package:pure/pure.dart';
 import 'package:ai_client/src/core/extension/extensions.dart';
 import 'package:ai_client/src/core/widget/bloc_scope.dart';
 import 'package:ai_client/src/feature/settings/bloc/settings_bloc.dart';
 import 'package:ai_client/src/feature/settings/enum/app_theme.dart';
+import 'package:flutter/material.dart';
+import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:pure/pure.dart';
 
 AppTheme _theme(SettingsState state) => state.data.theme;
 
@@ -33,7 +33,8 @@ class SettingsScope extends StatelessWidget {
   static ScopeData<AppTheme> get appThemeOf => _scope.select(_theme);
 
   /* --- Methods --- */
-  void seTheme(BuildContext context, AppTheme theme) {
+
+  static void setTheme(BuildContext context, AppTheme theme) {
     _scope.add(context, SettingsEvent.setTheme(theme: theme));
   }
 

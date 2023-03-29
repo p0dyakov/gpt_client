@@ -1,9 +1,8 @@
-import 'package:flutter/material.dart';
 import 'package:ai_client/src/core/extension/extensions.dart';
 import 'package:ai_client/src/core/gen/l10n/app_localizations.g.dart';
 import 'package:ai_client/src/core/router/app_router.dart';
 import 'package:ai_client/src/feature/app/widget/app_router_builder.dart';
-import 'package:ai_client/src/feature/settings/widget/scope/settings_scope.dart';
+import 'package:flutter/material.dart';
 
 class AppConfiguration extends StatelessWidget {
   const AppConfiguration({
