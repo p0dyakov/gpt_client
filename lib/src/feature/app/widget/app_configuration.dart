@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
-import 'package:purple_starter/src/core/extension/extensions.dart';
-import 'package:purple_starter/src/core/gen/l10n/app_localizations.g.dart';
-import 'package:purple_starter/src/core/router/app_router.dart';
-import 'package:purple_starter/src/feature/app/widget/app_router_builder.dart';
-import 'package:purple_starter/src/feature/settings/widget/scope/settings_scope.dart';
+import 'package:ai_client/src/core/extension/extensions.dart';
+import 'package:ai_client/src/core/gen/l10n/app_localizations.g.dart';
+import 'package:ai_client/src/core/router/app_router.dart';
+import 'package:ai_client/src/feature/app/widget/app_router_builder.dart';
+import 'package:ai_client/src/feature/settings/widget/scope/settings_scope.dart';
 
 class AppConfiguration extends StatelessWidget {
   const AppConfiguration({
@@ -12,7 +12,7 @@ class AppConfiguration extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    final themeMode = SettingsScope.themeModeOf(context, listen: true);
+    // final themeMode = SettingsScope.themeModeOf(context, listen: false);
 
     return AppRouterBuilder(
       createRouter: (context) => AppRouter(),
@@ -24,7 +24,7 @@ class AppConfiguration extends StatelessWidget {
         supportedLocales: AppLocalizations.supportedLocales,
         theme: ThemeData.light(),
         darkTheme: ThemeData.dark(),
-        themeMode: themeMode,
+        themeMode: ThemeMode.light,
       ),
     );
   }

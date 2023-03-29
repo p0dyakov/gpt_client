@@ -1,7 +1,7 @@
-import 'package:purple_starter/src/core/di/shared_parent.dart';
-import 'package:purple_starter/src/feature/settings/bloc/settings_bloc.dart';
-import 'package:purple_starter/src/feature/settings/database/settings_dao.dart';
-import 'package:purple_starter/src/feature/settings/repository/settings_repository.dart';
+import 'package:ai_client/src/core/di/shared_parent.dart';
+import 'package:ai_client/src/feature/settings/bloc/settings_bloc.dart';
+import 'package:ai_client/src/feature/settings/database/settings_dao.dart';
+import 'package:ai_client/src/feature/settings/repository/settings_repository.dart';
 
 abstract class SettingsDependencies implements SettingsBlocDependencies {}
 

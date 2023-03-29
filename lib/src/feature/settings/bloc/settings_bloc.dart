@@ -1,7 +1,7 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:purple_starter/src/feature/settings/enum/app_theme.dart';
-import 'package:purple_starter/src/feature/settings/model/settings_data.dart';
-import 'package:purple_starter/src/feature/settings/repository/settings_repository.dart';
+import 'package:ai_client/src/feature/settings/enum/app_theme.dart';
+import 'package:ai_client/src/feature/settings/model/settings_data.dart';
+import 'package:ai_client/src/feature/settings/repository/settings_repository.dart';
 import 'package:stream_bloc/stream_bloc.dart';
 
 part 'settings_bloc.freezed.dart';

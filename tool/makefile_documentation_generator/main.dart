@@ -124,8 +124,7 @@ Markdown unorderedListBuilder<T>(
 Markdown targetEntry(List<Target> targets, Target target) {
   final comments = target.comments;
   final name = target.name;
-  final prerequisites =
-      target.prerequisites.where((element) => element.isNotEmpty);
+  final prerequisites = target.prerequisites.where((element) => element.isNotEmpty);
   final usedBy = targets.where(
     (element) =>
         element.prerequisites.contains(name) ||
@@ -149,10 +148,8 @@ Markdown targetEntry(List<Target> targets, Target target) {
           ),
         ],
       ),
-      if (usedBy.isNotEmpty)
-        unorderedListBuilder('Used by', usedBy, targetLink),
-      if (prerequisites.isNotEmpty)
-        unorderedListBuilder('Perquisites', prerequisites, codeText),
+      if (usedBy.isNotEmpty) unorderedListBuilder('Used by', usedBy, targetLink),
+      if (prerequisites.isNotEmpty) unorderedListBuilder('Perquisites', prerequisites, codeText),
       if (recipe.isNotEmpty)
         Markdown.section(
           header: 'Recipe',

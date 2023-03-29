@@ -1,8 +1,8 @@
 import 'package:arbor/arbor.dart';
 import 'package:flutter/foundation.dart';
 import 'package:mark/mark.dart';
-import 'package:purple_starter/src/core/di/shared_parent.dart';
-import 'package:purple_starter/src/core/logic/identity_logging_mixin.dart';
+import 'package:ai_client/src/core/di/shared_parent.dart';
+import 'package:ai_client/src/core/logic/identity_logging_mixin.dart';
 
 abstract class AppArborObserverDependencies implements LoggerDependency {}
 

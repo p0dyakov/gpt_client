@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:purple_starter/src/core/widget/scope.dart';
+import 'package:ai_client/src/core/widget/scope.dart';
 
 class AppLifecycleScope extends Scope {
   static const DelegateAccess<_AppLifecycleScopeDelegate> _delegateOf =

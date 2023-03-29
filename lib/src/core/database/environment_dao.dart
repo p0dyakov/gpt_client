@@ -1,5 +1,5 @@
 import 'package:pure/pure.dart';
-import 'package:purple_starter/src/core/enum/environment.dart';
+import 'package:ai_client/src/core/enum/environment.dart';
 
 abstract class IEnvironmentDao {
   Environment get environment;

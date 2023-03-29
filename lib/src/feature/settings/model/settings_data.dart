@@ -1,5 +1,5 @@
 import 'package:freezed_annotation/freezed_annotation.dart';
-import 'package:purple_starter/src/feature/settings/enum/app_theme.dart';
+import 'package:ai_client/src/feature/settings/enum/app_theme.dart';
 
 part 'settings_data.freezed.dart';
 

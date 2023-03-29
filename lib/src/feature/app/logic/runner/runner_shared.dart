@@ -1,5 +1,5 @@
-import 'package:purple_starter/src/feature/app/logic/main_runner.dart';
-import 'package:purple_starter/src/feature/app/purple_starter_app.dart';
+import 'package:ai_client/src/feature/app/logic/main_runner.dart';
+import 'package:ai_client/src/feature/app/ai_client_app.dart';
 
 void sharedRun(InitializationHooks initializationHooks) => MainRunner.run(
       appBuilder: (
@@ -8,7 +8,7 @@ void sharedRun(InitializationHooks initializationHooks) => MainRunner.run(
         logger,
         configurationRepository,
       ) =>
-          PurpleStarterApp(
+          AiClientApp(
         initializationData: initializationData,
         observer: observer,
         logger: logger,

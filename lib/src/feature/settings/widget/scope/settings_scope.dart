@@ -1,10 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:pure/pure.dart';
-import 'package:purple_starter/src/core/extension/extensions.dart';
-import 'package:purple_starter/src/core/widget/bloc_scope.dart';
-import 'package:purple_starter/src/feature/settings/bloc/settings_bloc.dart';
-import 'package:purple_starter/src/feature/settings/enum/app_theme.dart';
+import 'package:ai_client/src/core/extension/extensions.dart';
+import 'package:ai_client/src/core/widget/bloc_scope.dart';
+import 'package:ai_client/src/feature/settings/bloc/settings_bloc.dart';
+import 'package:ai_client/src/feature/settings/enum/app_theme.dart';
 
 AppTheme _theme(SettingsState state) => state.data.theme;
 
