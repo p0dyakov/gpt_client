@@ -5,10 +5,7 @@ import 'package:flutter_arbor/flutter_arbor.dart';
 import 'package:mark/mark.dart';
 
 extension BuildContextX on BuildContext {
-  AppDependencies get _appDependencies => NodeScope.of<AppDependencies>(
-        this,
-        listen: true,
-      );
+  AppDependencies get _appDependencies => NodeScope.of<AppDependencies>(this);
 
   CoreDependencies get coreDependencies => _appDependencies.core;
   FeatureDependencies get featureDependencies => _appDependencies.feature;

@@ -50,7 +50,7 @@ dependencies:
 
   # Logging
   mark: ^0.2.0
-  sentry_flutter: ^6.2.2
+  sentry_flutter: ^7.4.0
   stack_trace: ^1.10.0
 
   # Persistance
@@ -64,13 +64,14 @@ dependencies:
   retrofit: ^4.0.1
 
   # Navigation
-  auto_route: ^5.0.1
+  auto_route: ^6.0.4
 
   flutter_chat_ui: ^1.6.6
   flutter_chat_types: ^3.6.0
   dart_openai: ^1.8.4
   uuid: ^3.0.7
   flutter_chatgpt_api: ^1.1.0
+  flutter_keyboard_visibility: ^5.4.0 
 
 dev_dependencies:
   # Analyzer extensions
@@ -83,7 +84,7 @@ dev_dependencies:
 
   # Code generation
   build_runner: ^2.1.7
-  auto_route_generator: ^5.0.2
+  auto_route_generator: ^6.0.0
   select: ^0.4.1
   retrofit_generator: ^6.0.0+1
   drift_dev: ^2.5.2
@@ -105,3 +106,20 @@ flutter:
   uses-material-design: true
   assets:
     - asset/image/
+  fonts:
+    - family: Inter
+      fonts:
+          - asset: asset/font/inter/Inter-ExtraLight.ttf
+            weight: 200
+          - asset: asset/font/inter/Inter-Light.ttf
+            weight: 300
+          - asset: asset/font/inter/Inter-Regular.ttf
+            weight: 400
+          - asset: asset/font/inter/Inter-Medium.ttf
+            weight: 500
+          - asset: asset/font/inter/Inter-SemiBold.ttf
+            weight: 600
+          - asset: asset/font/inter/Inter-Bold.ttf
+            weight: 700
+          - asset: asset/font/inter/Inter-ExtraBold.ttf
+            weight: 800

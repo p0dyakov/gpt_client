@@ -7,20 +7,19 @@ import 'package:uuid/uuid.dart';
 
 class ChatRepository implements IChatRepository {
   final ChatRepositoryDependencies _dependencies;
-  final _user = const types.User(id: 'user');
-  final _ai = const types.User(id: 'ai');
-  final List<types.Message> _messages = [];
 
   ChatRepository(this._dependencies) {
     OpenAI.apiKey = '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';
   }
 
+  final _user = const types.User(id: 'user');
+  final _ai = const types.User(id: 'ai');
+  final List<types.Message> _uiMessages = [];
+  final List<OpenAIChatCompletionChoiceMessageModel> _messages = [];
+
   @override
-  ChatData currentData() => ChatData(
-        messages: [],
-        ai: _ai,
-        user: _user,
-      );
+  ChatData currentData() =>
+      ChatData(messages: _uiMessages, ai: _ai, user: _user);
 
   @override
   Future<void> sendMessage(String text) async {
@@ -33,28 +32,35 @@ class ChatRepository implements IChatRepository {
       ),
     );
 
+    _messages.add(
+      OpenAIChatCompletionChoiceMessageModel(
+        content: text,
+        role: OpenAIChatMessageRole.user,
+      ),
+    );
+
     final chatCompletion = await OpenAI.instance.chat.create(
       model: 'gpt-3.5-turbo',
-      messages: [
-        OpenAIChatCompletionChoiceMessageModel(
-          content: text,
-          role: 'user',
-        ),
-      ],
+      messages: _messages,
     );
+
+    _messages.add(chatCompletion.choices.last.message);
 
     _addMessage(
       types.TextMessage(
         author: _ai,
         createdAt: DateTime.now().millisecondsSinceEpoch,
         id: const Uuid().v4(),
-        text: chatCompletion.choices.first.message.content,
+        text: chatCompletion.choices.last.message.content,
       ),
     );
   }
 
   @override
-  Future<void> clearMessages() async {}
+  Future<void> clearMessages() async {
+    _uiMessages.clear();
+    _messages.clear();
+  }
 
-  void _addMessage(types.Message message) => _messages.insert(0, message);
+  void _addMessage(types.Message message) => _uiMessages.insert(0, message);
 }

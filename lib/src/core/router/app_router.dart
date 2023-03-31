@@ -4,10 +4,13 @@ import 'package:flutter/material.dart';
 
 part 'app_router.gr.dart';
 
-@MaterialAutoRouter(
-  replaceInRouteName: 'Page,Route',
-  routes: [
-    AutoRoute<void>(page: ChatPage, initial: true),
-  ],
-)
-class AppRouter extends _$AppRouter {}
+@AutoRouterConfig()
+class AppRouter extends _$AppRouter {
+  @override
+  RouteType get defaultRouteType => const RouteType.material();
+
+  @override
+  final List<AutoRoute> routes = [
+    AutoRoute(page: ChatRoute.page, path: '/'),
+  ];
+}

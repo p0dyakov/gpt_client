@@ -1,5 +1,7 @@
 import 'package:ai_client/src/core/extension/extensions.dart';
 import 'package:ai_client/src/core/gen/l10n/app_localizations.g.dart';
+import 'package:ai_client/src/core/resources/dark_theme.dart';
+import 'package:ai_client/src/core/resources/light_theme.dart';
 import 'package:ai_client/src/core/router/app_router.dart';
 import 'package:ai_client/src/feature/app/widget/app_router_builder.dart';
 import 'package:flutter/material.dart';
@@ -21,8 +23,8 @@ class AppConfiguration extends StatelessWidget {
         onGenerateTitle: (context) => context.localized.appTitle,
         localizationsDelegates: AppLocalizations.localizationsDelegates,
         supportedLocales: AppLocalizations.supportedLocales,
-        theme: ThemeData.light(),
-        darkTheme: ThemeData.dark(),
+        theme: lightTheme,
+        darkTheme: darkTheme,
         themeMode: ThemeMode.light,
       ),
     );

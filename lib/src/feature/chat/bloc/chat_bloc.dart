@@ -14,7 +14,7 @@ class ChatBloc extends StreamBloc<ChatEvent, ChatState> {
 
   ChatBloc(this._dependencies)
       : super(
-          _Idle(
+          ChatState.idle(
             data: _dependencies.chatRepository.currentData(),
           ),
         );
@@ -41,17 +41,17 @@ class ChatBloc extends StreamBloc<ChatEvent, ChatState> {
     yield ChatState.loading(data: _data);
     try {
       await body();
-      yield _LoadSuccess(
+      yield ChatState.updatedSuccessfully(
         data: _dependencies.chatRepository.currentData(),
       );
     } on Object catch (e) {
-      yield _Failure(
+      yield ChatState.error(
         data: _data,
         error: e.toString(),
       );
       rethrow;
     } finally {
-      yield _Idle(data: _data);
+      yield ChatState.idle(data: _data);
     }
   }
 }

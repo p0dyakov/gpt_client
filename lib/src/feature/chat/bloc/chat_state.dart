@@ -4,15 +4,15 @@ part of 'chat_bloc.dart';
 class ChatState with _$ChatState {
   const factory ChatState.idle({
     required ChatData data,
-  }) = _Idle;
-  const factory ChatState.loadFailure({
+  }) = ChatStateIdle;
+  const factory ChatState.error({
     required ChatData data,
     required String error,
-  }) = _Failure;
-  const factory ChatState.loadSuccess({
+  }) = ChatStateError;
+  const factory ChatState.updatedSuccessfully({
     required ChatData data,
-  }) = _LoadSuccess;
+  }) = ChatStateUpdatedSuccessfully;
   const factory ChatState.loading({
     required ChatData data,
-  }) = _Loading;
+  }) = ChatStateLoading;
 }
