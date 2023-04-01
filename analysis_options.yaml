@@ -3,6 +3,8 @@ include: package:purple_metrics_lints/purple_metrics_lints.yaml
 analyzer:
   plugins:
     - drift
+  strong-mode:
+    implicit-dynamic: true
   exclude:
     - 'tool/google_localizer/**'
     - 'lib/generated_plugin_registrant.dart'

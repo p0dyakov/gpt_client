@@ -70,7 +70,7 @@ class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
                           ),
                         ),
                         Text(
-                          isTyping ? 'typing' : 'oline',
+                          isTyping ? 'typing' : 'online',
                           style: TextStyle(
                             color: Theme.of(context).primaryColor,
                             fontSize: 13.5,

@@ -15,7 +15,7 @@ class ChatDependenciesModule<P extends SharedParent<P>>
 
   @override
   IChatDao get chatDao => shared(
-        () => ChatDao(preferencesDriver),
+        () => ChatDao(database),
       );
 
   @override

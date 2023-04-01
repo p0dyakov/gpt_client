@@ -6,6 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_chat_ui/flutter_chat_ui.dart' as ui;
 import 'package:intl/intl.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 @RoutePage(name: 'ChatRoute')
 class ChatPage extends StatefulWidget {
@@ -17,11 +18,9 @@ class ChatPage extends StatefulWidget {
 
 class _ChatPageState extends State<ChatPage> {
   @override
-  Widget build(BuildContext context) {
-    return ChatScope(
-      child: BlocBuilder<ChatBloc, ChatState>(
-        builder: (context, state) {
-          return Scaffold(
+  Widget build(BuildContext context) => ChatScope(
+        child: BlocBuilder<ChatBloc, ChatState>(
+          builder: (context, state) => Scaffold(
             appBar: ChatAppBar(
               isTyping: state is ChatStateLoading,
             ),
@@ -29,11 +28,49 @@ class _ChatPageState extends State<ChatPage> {
             body: SafeArea(
               child: ui.Chat(
                 messages: state.data.messages,
+                inputOptions: ui.InputOptions(
+                  sendButtonVisibilityMode: state is ChatStateLoading
+                      ? ui.SendButtonVisibilityMode.hidden
+                      : ui.SendButtonVisibilityMode.editing,
+                ),
                 onSendPressed: (partialText) => ChatScope.sendMessage(
                   context,
                   partialText.text,
                 ),
-                // emptyState
+                emptyState: Column(
+                  mainAxisAlignment: MainAxisAlignment.center,
+                  children: [
+                    Image(
+                      image: const AssetImage('asset/image/ai_logo.png'),
+                      width: 150,
+                      height: 150,
+                      color: Theme.of(context).primaryColor,
+                    ),
+                    const Text(
+                      'Ask your assistant something',
+                      textAlign: TextAlign.center,
+                      style: TextStyle(
+                        fontSize: 20,
+                        fontWeight: FontWeight.w400,
+                      ),
+                    ),
+                    const SizedBox(height: 3),
+                    InkWell(
+                      onTap: () => launchUrl(
+                        Uri.parse('https://openai.com/blog/chatgpt'),
+                      ),
+                      child: Text(
+                        'More about Chat GPT',
+                        textAlign: TextAlign.center,
+                        style: TextStyle(
+                          fontSize: 16,
+                          fontWeight: FontWeight.w400,
+                          color: Theme.of(context).primaryColor,
+                        ),
+                      ),
+                    ),
+                  ],
+                ),
                 user: state.data.user,
                 scrollPhysics: const BouncingScrollPhysics(),
                 dateHeaderBuilder: (header) => Padding(
@@ -141,9 +178,7 @@ class _ChatPageState extends State<ChatPage> {
                 ),
               ),
             ),
-          );
-        },
-      ),
-    );
-  }
+          ),
+        ),
+      );
 }

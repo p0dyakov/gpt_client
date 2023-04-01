@@ -17,12 +17,19 @@ class ChatBloc extends StreamBloc<ChatEvent, ChatState> {
           ChatState.idle(
             data: _dependencies.chatRepository.currentData(),
           ),
-        );
+        ) {
+    add(const _GetStoredMessages());
+  }
 
   @override
   Stream<ChatState> mapEventToStates(ChatEvent event) => event.when(
         sendMessage: _sendMessage,
         clearMessages: _clearMessages,
+        getStoredMessages: _getStoredMessages,
+      );
+
+  Stream<ChatState> _getStoredMessages() => _performMutation(
+        () => _dependencies.chatRepository.getStoredMessages(),
       );
 
   Stream<ChatState> _sendMessage(String text) => _performMutation(
