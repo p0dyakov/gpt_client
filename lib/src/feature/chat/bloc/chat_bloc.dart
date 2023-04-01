@@ -21,6 +21,8 @@ class ChatBloc extends StreamBloc<ChatEvent, ChatState> {
     add(const _GetStoredMessages());
   }
 
+  ChatData get _data => state.data;
+
   @override
   Stream<ChatState> mapEventToStates(ChatEvent event) => event.when(
         sendMessage: _sendMessage,
@@ -39,8 +41,6 @@ class ChatBloc extends StreamBloc<ChatEvent, ChatState> {
   Stream<ChatState> _clearMessages() => _performMutation(
         () => _dependencies.chatRepository.clearMessages(),
       );
-
-  ChatData get _data => state.data;
 
   Stream<ChatState> _performMutation(
     FutureOr<void> Function() body,

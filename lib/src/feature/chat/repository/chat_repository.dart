@@ -1,7 +1,6 @@
-import 'package:ai_client/src/core/extension/extensions.dart';
 import 'package:ai_client/src/feature/chat/model/ai_message.dart';
 import 'package:ai_client/src/feature/chat/model/chat_data.dart';
-import 'package:ai_client/src/feature/chat/repository/chat_dependencies.dart';
+import 'package:ai_client/src/feature/chat/repository/chat_repository_dependencies.dart';
 import 'package:ai_client/src/feature/chat/repository/chat_repository_interface.dart';
 import 'package:dart_openai/openai.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
@@ -15,14 +14,14 @@ class ChatRepository implements IChatRepository {
   }
 
   final _user = const types.User(id: 'user');
-  final _ai = const types.User(id: 'ai');
+  final _assistant = const types.User(id: 'assistant');
   List<types.Message> _uiMessage = [];
   List<OpenAIMessage> _messages = [];
 
   @override
   ChatData currentData() => ChatData(
         messages: _uiMessage,
-        ai: _ai,
+        assistant: _assistant,
         user: _user,
       );
 
@@ -58,7 +57,7 @@ class ChatRepository implements IChatRepository {
 
     _addMessage(
       types.TextMessage(
-        author: _ai,
+        author: _assistant,
         createdAt: DateTime.now().millisecondsSinceEpoch,
         id: const Uuid().v4(),
         text: aiMessage.content,
@@ -81,7 +80,7 @@ class ChatRepository implements IChatRepository {
     _uiMessage = _messages.reversed
         .map(
           (m) => types.TextMessage(
-            author: m.role == OpenAIChatMessageRole.user ? _user : _ai,
+            author: m.role == OpenAIChatMessageRole.user ? _user : _assistant,
             createdAt: DateTime.now().millisecondsSinceEpoch,
             id: const Uuid().v4(),
             text: m.content,

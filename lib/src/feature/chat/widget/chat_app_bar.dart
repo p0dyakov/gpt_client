@@ -6,13 +6,13 @@ import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
-  final double _preferredHeight = 90;
+  static const double _preferredHeight = 90;
   final bool isTyping;
 
-  const ChatAppBar({super.key, required this.isTyping});
+  const ChatAppBar({required this.isTyping, super.key});
 
   @override
-  Size get preferredSize => Size.fromHeight(_preferredHeight);
+  Size get preferredSize => const Size.fromHeight(_preferredHeight);
 
   @override
   Widget build(BuildContext context) {

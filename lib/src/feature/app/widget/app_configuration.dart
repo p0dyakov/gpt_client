@@ -4,6 +4,7 @@ import 'package:ai_client/src/core/resources/dark_theme.dart';
 import 'package:ai_client/src/core/resources/light_theme.dart';
 import 'package:ai_client/src/core/router/app_router.dart';
 import 'package:ai_client/src/feature/app/widget/app_router_builder.dart';
+import 'package:ai_client/src/feature/settings/widget/scope/settings_scope.dart';
 import 'package:flutter/material.dart';
 
 class AppConfiguration extends StatelessWidget {
@@ -13,7 +14,7 @@ class AppConfiguration extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // final themeMode = SettingsScope.themeModeOf(context, listen: false);
+    final themeMode = SettingsScope.themeModeOf(context);
 
     return AppRouterBuilder(
       createRouter: (context) => AppRouter(),
@@ -25,7 +26,7 @@ class AppConfiguration extends StatelessWidget {
         supportedLocales: AppLocalizations.supportedLocales,
         theme: lightTheme,
         darkTheme: darkTheme,
-        themeMode: ThemeMode.light,
+        themeMode: themeMode,
       ),
     );
   }

@@ -16,6 +16,10 @@ final lightTheme = ThemeData(
     ),
     iconTheme: IconThemeData(color: Color.fromARGB(255, 255, 255, 255)),
   ),
+  textSelectionTheme: const TextSelectionThemeData(
+    selectionColor: Color.fromARGB(255, 111, 181, 210),
+    selectionHandleColor: Color.fromARGB(255, 111, 181, 210),
+  ),
   elevatedButtonTheme: ElevatedButtonThemeData(
     style: ButtonStyle(
       elevation: MaterialStateProperty.all(0),

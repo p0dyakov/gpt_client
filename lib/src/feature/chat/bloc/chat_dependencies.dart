@@ -1,3 +1,3 @@
-import 'package:ai_client/src/feature/chat/repository/chat_dependencies.dart';
+import 'package:ai_client/src/feature/chat/repository/chat_repository_dependencies.dart';
 
 abstract class ChatBlocDependencies implements ChatRepositoryDependency {}

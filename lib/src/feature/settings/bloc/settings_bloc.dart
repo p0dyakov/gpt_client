@@ -1,46 +1,12 @@
+import 'package:ai_client/src/feature/settings/bloc/settings_dependencies.dart';
 import 'package:ai_client/src/feature/settings/enum/app_theme.dart';
 import 'package:ai_client/src/feature/settings/model/settings_data.dart';
-import 'package:ai_client/src/feature/settings/repository/settings_repository.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:stream_bloc/stream_bloc.dart';
 
 part 'settings_bloc.freezed.dart';
-
-/* --- States --- */
-
-@freezed
-class SettingsState with _$SettingsState {
-  const factory SettingsState.idle({
-    required SettingsData data,
-  }) = SettingsStateIdle;
-
-  const factory SettingsState.loading({
-    required SettingsData data,
-  }) = SettingsStateLoading;
-
-  const factory SettingsState.updatedSuccessfully({
-    required SettingsData data,
-  }) = SettingsStateUpdatedSuccessfully;
-
-  const factory SettingsState.error({
-    required SettingsData data,
-    required String description,
-  }) = SettingsStateError;
-}
-
-/* --- Events --- */
-
-@freezed
-class SettingsEvent with _$SettingsEvent {
-  const factory SettingsEvent.setTheme({
-    required AppTheme theme,
-  }) = _SettingsEventSetTheme;
-}
-
-/* --- BLoC --- */
-
-abstract class SettingsBlocDependencies
-    implements SettingsRepositoryDependency {}
+part 'settings_state.dart';
+part 'settings_event.dart';
 
 class SettingsBloc extends StreamBloc<SettingsEvent, SettingsState> {
   final SettingsBlocDependencies _dependencies;
@@ -53,6 +19,15 @@ class SettingsBloc extends StreamBloc<SettingsEvent, SettingsState> {
         );
 
   SettingsData get _data => state.data;
+
+  @override
+  Stream<SettingsState> mapEventToStates(SettingsEvent event) => event.when(
+        setTheme: _setTheme,
+      );
+
+  Stream<SettingsState> _setTheme(AppTheme theme) => _performMutation(
+        () => _dependencies.settingsRepository.setTheme(theme),
+      );
 
   Stream<SettingsState> _performMutation(
     Future<void> Function() body,
@@ -73,13 +48,4 @@ class SettingsBloc extends StreamBloc<SettingsEvent, SettingsState> {
       yield SettingsState.idle(data: _data);
     }
   }
-
-  Stream<SettingsState> _setTheme(AppTheme theme) => _performMutation(
-        () => _dependencies.settingsRepository.setTheme(theme),
-      );
-
-  @override
-  Stream<SettingsState> mapEventToStates(SettingsEvent event) => event.when(
-        setTheme: _setTheme,
-      );
 }

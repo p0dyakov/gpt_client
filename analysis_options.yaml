@@ -13,3 +13,4 @@ analyzer:
 dart_code_metrics:
   rules:
     - prefer-moving-to-variable: false
+    - no-magic-number: false
