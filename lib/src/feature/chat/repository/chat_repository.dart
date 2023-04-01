@@ -10,9 +10,10 @@ class ChatRepository implements IChatRepository {
   final ChatRepositoryDependencies _dependencies;
 
   ChatRepository(this._dependencies) {
-    OpenAI.apiKey = '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';
+    OpenAI.apiKey = _dependencies.environmentDao.openAIApiKey;
   }
 
+  final _model = 'gpt-3.5-turbo';
   final _user = const types.User(id: 'user');
   final _assistant = const types.User(id: 'assistant');
   List<types.Message> _uiMessage = [];
@@ -44,7 +45,7 @@ class ChatRepository implements IChatRepository {
     await _dependencies.chatDao.addMessage(userMessage);
 
     final chatCompletion = await OpenAI.instance.chat.create(
-      model: 'gpt-3.5-turbo',
+      model: _model,
       messages: _messages,
     );
 
@@ -81,7 +82,6 @@ class ChatRepository implements IChatRepository {
         .map(
           (m) => types.TextMessage(
             author: m.role == OpenAIChatMessageRole.user ? _user : _assistant,
-            createdAt: DateTime.now().millisecondsSinceEpoch,
             id: const Uuid().v4(),
             text: m.content,
           ),

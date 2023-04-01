@@ -1,3 +1,4 @@
+import 'package:ai_client/src/core/database/environment_dao.dart';
 import 'package:ai_client/src/core/di/shared_parent.dart';
 import 'package:ai_client/src/feature/chat/bloc/chat_dependencies.dart';
 import 'package:ai_client/src/feature/chat/database/chat_dao.dart';
@@ -22,4 +23,7 @@ class ChatDependenciesModule<P extends SharedParent<P>>
   IChatRepository get chatRepository => shared(
         () => ChatRepository(this),
       );
+
+  @override
+  IEnvironmentDao get environmentDao => shared(EnvironmentDao.new);
 }

@@ -4,6 +4,7 @@ import 'package:pure/pure.dart';
 abstract class IEnvironmentDao {
   Environment get environment;
   String get sentryDsn;
+  String get openAIApiKey;
 }
 
 abstract class EnvironmentDaoDependency {
@@ -19,4 +20,7 @@ class EnvironmentDao implements IEnvironmentDao {
 
   @override
   String get sentryDsn => const String.fromEnvironment('SENTRY_DSN');
+
+  @override
+  String get openAIApiKey => const String.fromEnvironment('OPEN_AI_API_KEY');
 }
