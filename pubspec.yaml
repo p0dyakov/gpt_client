@@ -70,8 +70,6 @@ dependencies:
   flutter_chat_types: ^3.6.0
   dart_openai: ^1.8.4
   uuid: ^3.0.7
-  flutter_chatgpt_api: ^1.1.0
-  flutter_keyboard_visibility: ^5.4.0 
   url_launcher: ^6.1.10
 
 dev_dependencies:
