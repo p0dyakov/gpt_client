@@ -1,4 +1,4 @@
-import 'package:ai_client/src/core/enum/environment.dart';
+import 'package:gpt_client/src/core/enum/environment.dart';
 import 'package:pure/pure.dart';
 
 abstract class IEnvironmentDao {

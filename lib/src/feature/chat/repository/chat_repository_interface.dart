@@ -1,4 +1,4 @@
-import 'package:ai_client/src/feature/chat/model/chat_data.dart';
+import 'package:gpt_client/src/feature/chat/model/chat_data.dart';
 
 abstract class IChatRepository {
   ChatData currentData();

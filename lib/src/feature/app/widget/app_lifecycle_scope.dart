@@ -1,5 +1,5 @@
-import 'package:ai_client/src/core/widget/scope.dart';
 import 'package:flutter/material.dart';
+import 'package:gpt_client/src/core/widget/scope.dart';
 
 class AppLifecycleScope extends Scope {
   static const DelegateAccess<_AppLifecycleScopeDelegate> _delegateOf =

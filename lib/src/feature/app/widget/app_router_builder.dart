@@ -1,7 +1,7 @@
-import 'package:ai_client/src/core/extension/extensions.dart';
-import 'package:ai_client/src/feature/app/router/logger_navigator_observer.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
+import 'package:gpt_client/src/core/extension/extensions.dart';
+import 'package:gpt_client/src/feature/app/router/logger_navigator_observer.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 
 typedef CreateRouter = RootStackRouter Function(BuildContext context);

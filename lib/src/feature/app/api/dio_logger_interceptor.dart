@@ -1,6 +1,6 @@
-import 'package:ai_client/src/core/di/shared_parent.dart';
-import 'package:ai_client/src/core/logic/identity_logging_mixin.dart';
 import 'package:dio/dio.dart';
+import 'package:gpt_client/src/core/di/shared_parent.dart';
+import 'package:gpt_client/src/core/logic/identity_logging_mixin.dart';
 import 'package:mark/mark.dart';
 
 abstract class DioLoggerInterceptorDependencies implements LoggerDependency {}

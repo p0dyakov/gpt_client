@@ -1,12 +1,12 @@
-import 'package:ai_client/src/feature/settings/bloc/settings_dependencies.dart';
-import 'package:ai_client/src/feature/settings/enum/app_theme.dart';
-import 'package:ai_client/src/feature/settings/model/settings_data.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:gpt_client/src/feature/settings/bloc/settings_dependencies.dart';
+import 'package:gpt_client/src/feature/settings/enum/app_theme.dart';
+import 'package:gpt_client/src/feature/settings/model/settings_data.dart';
 import 'package:stream_bloc/stream_bloc.dart';
 
 part 'settings_bloc.freezed.dart';
-part 'settings_state.dart';
 part 'settings_event.dart';
+part 'settings_state.dart';
 
 class SettingsBloc extends StreamBloc<SettingsEvent, SettingsState> {
   final SettingsBlocDependencies _dependencies;

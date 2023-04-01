@@ -1,6 +1,6 @@
-import 'package:ai_client/src/feature/chat/model/ai_message.dart';
 import 'package:dart_openai/openai.dart';
 import 'package:drift/drift.dart';
+import 'package:gpt_client/src/feature/chat/model/open_ai_message.dart';
 
 @UseRowClass(OpenAIMessage, constructor: 'fromDb')
 class Messages extends Table {

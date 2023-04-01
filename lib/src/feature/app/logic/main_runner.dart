@@ -1,13 +1,13 @@
 import 'dart:async';
 
-import 'package:ai_client/src/core/repository/configuration_repository.dart';
-import 'package:ai_client/src/feature/app/bloc/initialization_bloc.dart';
-import 'package:ai_client/src/feature/app/di/app_arbor_observer.dart';
-import 'package:ai_client/src/feature/app/di/bootstrap_dependencies.dart';
-import 'package:ai_client/src/feature/app/logger/error_reporting_message_processor.dart';
-import 'package:ai_client/src/feature/app/logger/pretty_ephemeral_message_processor.dart';
 import 'package:arbor/arbor.dart';
 import 'package:flutter/material.dart';
+import 'package:gpt_client/src/core/repository/configuration_repository.dart';
+import 'package:gpt_client/src/feature/app/bloc/initialization_bloc.dart';
+import 'package:gpt_client/src/feature/app/di/app_arbor_observer.dart';
+import 'package:gpt_client/src/feature/app/di/bootstrap_dependencies.dart';
+import 'package:gpt_client/src/feature/app/logger/error_reporting_message_processor.dart';
+import 'package:gpt_client/src/feature/app/logger/pretty_ephemeral_message_processor.dart';
 import 'package:mark/mark.dart';
 import 'package:sentry_flutter/sentry_flutter.dart';
 import 'package:stack_trace/stack_trace.dart';

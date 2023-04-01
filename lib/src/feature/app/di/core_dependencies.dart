@@ -1,9 +1,9 @@
-import 'package:ai_client/src/core/database/drift/app_database.dart';
-import 'package:ai_client/src/core/di/app_dependencies.dart';
-import 'package:ai_client/src/core/di/shared_parent.dart';
-import 'package:ai_client/src/feature/app/api/dio_logger_interceptor.dart';
-import 'package:ai_client/src/feature/app/database/app_preferences_driver_observer.dart';
 import 'package:dio/dio.dart';
+import 'package:gpt_client/src/core/database/drift/app_database.dart';
+import 'package:gpt_client/src/core/di/app_dependencies.dart';
+import 'package:gpt_client/src/core/di/shared_parent.dart';
+import 'package:gpt_client/src/feature/app/api/dio_logger_interceptor.dart';
+import 'package:gpt_client/src/feature/app/database/app_preferences_driver_observer.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:typed_preferences/typed_preferences.dart';
 
@@ -23,7 +23,7 @@ class CoreDependenciesModule<P extends CoreDependenciesModuleParent<P>>
   @override
   AppDatabase get database => shared(
         () => AppDatabase(
-          name: 'ai_client_database',
+          name: 'gpt_client_database',
         ),
         dispose: (database) => database.close(),
       );

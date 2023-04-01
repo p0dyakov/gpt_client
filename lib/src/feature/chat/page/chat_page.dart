@@ -1,10 +1,10 @@
-import 'package:ai_client/src/feature/chat/bloc/chat_bloc.dart';
-import 'package:ai_client/src/feature/chat/widget/chat_app_bar.dart';
-import 'package:ai_client/src/feature/chat/widget/scope/chat_scope.dart';
 import 'package:auto_route/auto_route.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_chat_ui/flutter_chat_ui.dart' as ui;
+import 'package:gpt_client/src/feature/chat/bloc/chat_bloc.dart';
+import 'package:gpt_client/src/feature/chat/widget/chat_app_bar.dart';
+import 'package:gpt_client/src/feature/chat/widget/scope/chat_scope.dart';
 import 'package:intl/intl.dart';
 import 'package:url_launcher/url_launcher.dart';
 

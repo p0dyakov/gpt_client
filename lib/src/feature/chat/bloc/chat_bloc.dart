@@ -1,8 +1,8 @@
 import 'dart:async';
 
-import 'package:ai_client/src/feature/chat/bloc/chat_dependencies.dart';
-import 'package:ai_client/src/feature/chat/model/chat_data.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
+import 'package:gpt_client/src/feature/chat/bloc/chat_dependencies.dart';
+import 'package:gpt_client/src/feature/chat/model/chat_data.dart';
 import 'package:stream_bloc/stream_bloc.dart';
 
 part 'chat_bloc.freezed.dart';

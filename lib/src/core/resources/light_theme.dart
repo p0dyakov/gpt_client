@@ -1,5 +1,5 @@
-import 'package:ai_client/src/core/resources/sizes.dart';
 import 'package:flutter/material.dart';
+import 'package:gpt_client/src/core/resources/sizes.dart';
 
 final lightTheme = ThemeData(
   fontFamily: 'Inter',

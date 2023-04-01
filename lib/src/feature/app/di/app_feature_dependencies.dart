@@ -1,5 +1,5 @@
-import 'package:ai_client/src/core/di/shared_parent.dart';
-import 'package:ai_client/src/feature/app/router/logger_navigator_observer.dart';
+import 'package:gpt_client/src/core/di/shared_parent.dart';
+import 'package:gpt_client/src/feature/app/router/logger_navigator_observer.dart';
 
 abstract class AppFeatureDependencies
     implements LoggerNavigationObserverDependencies {}

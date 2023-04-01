@@ -1,4 +1,4 @@
-import 'package:ai_client/src/feature/chat/model/ai_message.dart';
+import 'package:gpt_client/src/feature/chat/model/open_ai_message.dart';
 
 abstract class IChatDao {
   Future<List<OpenAIMessage>> get storedMessages;

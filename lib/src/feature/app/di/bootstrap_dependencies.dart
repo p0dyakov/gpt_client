@@ -1,14 +1,14 @@
-import 'package:ai_client/src/core/database/environment_dao.dart';
-import 'package:ai_client/src/core/di/shared_parent.dart';
-import 'package:ai_client/src/core/extension/extensions.dart';
-import 'package:ai_client/src/core/repository/configuration_repository.dart';
-import 'package:ai_client/src/feature/app/bloc/app_bloc_observer.dart';
-import 'package:ai_client/src/feature/app/bloc/initialization_bloc.dart';
-import 'package:ai_client/src/feature/app/database/drift_logger.dart';
-import 'package:ai_client/src/feature/app/di/app_arbor_observer.dart';
 import 'package:arbor/arbor.dart';
 import 'package:drift/drift.dart';
 import 'package:flutter/foundation.dart';
+import 'package:gpt_client/src/core/database/environment_dao.dart';
+import 'package:gpt_client/src/core/di/shared_parent.dart';
+import 'package:gpt_client/src/core/extension/extensions.dart';
+import 'package:gpt_client/src/core/repository/configuration_repository.dart';
+import 'package:gpt_client/src/feature/app/bloc/app_bloc_observer.dart';
+import 'package:gpt_client/src/feature/app/bloc/initialization_bloc.dart';
+import 'package:gpt_client/src/feature/app/database/drift_logger.dart';
+import 'package:gpt_client/src/feature/app/di/app_arbor_observer.dart';
 import 'package:mark/mark.dart';
 import 'package:stream_bloc/stream_bloc.dart';
 

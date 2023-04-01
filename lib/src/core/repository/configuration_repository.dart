@@ -1,5 +1,5 @@
-import 'package:ai_client/src/core/database/environment_dao.dart';
-import 'package:ai_client/src/core/enum/environment.dart';
+import 'package:gpt_client/src/core/database/environment_dao.dart';
+import 'package:gpt_client/src/core/enum/environment.dart';
 
 abstract class IConfigurationRepository {
   Environment get environment;

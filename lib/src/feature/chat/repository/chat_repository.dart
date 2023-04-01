@@ -1,9 +1,9 @@
-import 'package:ai_client/src/feature/chat/model/ai_message.dart';
-import 'package:ai_client/src/feature/chat/model/chat_data.dart';
-import 'package:ai_client/src/feature/chat/repository/chat_repository_dependencies.dart';
-import 'package:ai_client/src/feature/chat/repository/chat_repository_interface.dart';
 import 'package:dart_openai/openai.dart';
 import 'package:flutter_chat_types/flutter_chat_types.dart' as types;
+import 'package:gpt_client/src/feature/chat/model/open_ai_message.dart';
+import 'package:gpt_client/src/feature/chat/model/chat_data.dart';
+import 'package:gpt_client/src/feature/chat/repository/chat_repository_dependencies.dart';
+import 'package:gpt_client/src/feature/chat/repository/chat_repository_interface.dart';
 import 'package:uuid/uuid.dart';
 
 class ChatRepository implements IChatRepository {

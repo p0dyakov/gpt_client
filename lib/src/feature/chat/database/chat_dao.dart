@@ -1,8 +1,8 @@
-import 'package:ai_client/src/core/database/drift/app_database.dart';
-import 'package:ai_client/src/core/database/drift/tables/messages_table.dart';
-import 'package:ai_client/src/feature/chat/database/chat_dao_interface.dart';
-import 'package:ai_client/src/feature/chat/model/ai_message.dart';
 import 'package:drift/drift.dart';
+import 'package:gpt_client/src/core/database/drift/app_database.dart';
+import 'package:gpt_client/src/core/database/drift/tables/messages_table.dart';
+import 'package:gpt_client/src/feature/chat/database/chat_dao_interface.dart';
+import 'package:gpt_client/src/feature/chat/model/open_ai_message.dart';
 
 part 'chat_dao.g.dart';
 

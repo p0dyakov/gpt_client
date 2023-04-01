@@ -1,8 +1,8 @@
 import 'dart:io';
 
-import 'package:ai_client/src/feature/app/database/drift_logger.dart';
 import 'package:drift/drift.dart';
 import 'package:drift/native.dart';
+import 'package:gpt_client/src/feature/app/database/drift_logger.dart';
 import 'package:path/path.dart' as path;
 import 'package:path_provider/path_provider.dart';
 

@@ -1,11 +1,11 @@
-import 'package:ai_client/src/core/database/drift/connection/open_connection_stub.dart'
-    if (dart.library.io) 'package:ai_client/src/core/database/drift/connection/open_connection_io.dart'
-    if (dart.library.html) 'package:ai_client/src/core/database/drift/connection/open_connection_web.dart'
-    as connection;
-import 'package:ai_client/src/core/database/drift/tables/messages_table.dart';
-import 'package:ai_client/src/feature/chat/model/ai_message.dart';
 import 'package:dart_openai/openai.dart';
 import 'package:drift/drift.dart';
+import 'package:gpt_client/src/core/database/drift/connection/open_connection_stub.dart'
+    if (dart.library.io) 'package:gpt_client/src/core/database/drift/connection/open_connection_io.dart'
+    if (dart.library.html) 'package:gpt_client/src/core/database/drift/connection/open_connection_web.dart'
+    as connection;
+import 'package:gpt_client/src/core/database/drift/tables/messages_table.dart';
+import 'package:gpt_client/src/feature/chat/model/open_ai_message.dart';
 
 part 'app_database.g.dart';
 

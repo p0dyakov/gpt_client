@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.example.ai_client">
+    package="com.example.gpt_client">
    <application
         android:label="Chat GPT"
         android:name="${applicationName}"

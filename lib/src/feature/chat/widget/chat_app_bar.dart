@@ -1,9 +1,9 @@
 import 'dart:ui';
 
-import 'package:ai_client/src/core/resources/sizes.dart';
-import 'package:ai_client/src/feature/chat/widget/scope/chat_scope.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
+import 'package:gpt_client/src/core/resources/sizes.dart';
+import 'package:gpt_client/src/feature/chat/widget/scope/chat_scope.dart';
 
 class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
   static const double _preferredHeight = 90;

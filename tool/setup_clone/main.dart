@@ -13,7 +13,7 @@ String capitalized(String source) =>
     source[0].toUpperCase() + source.substring(1);
 
 class NameBundle {
-  static const String _originalPackageName = 'ai_client';
+  static const String _originalPackageName = 'gpt_client';
 
   final String packageName;
   final String appTitle;

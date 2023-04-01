@@ -1,11 +1,11 @@
-import 'package:ai_client/src/core/database/drift/app_database.dart';
-import 'package:ai_client/src/core/di/app_dependencies.dart';
-import 'package:ai_client/src/core/di/shared_parent.dart';
-import 'package:ai_client/src/core/repository/configuration_repository.dart';
-import 'package:ai_client/src/feature/app/di/core_dependencies.dart';
-import 'package:ai_client/src/feature/app/di/feature_dependencies.dart';
 import 'package:arbor/arbor.dart';
 import 'package:dio/dio.dart';
+import 'package:gpt_client/src/core/database/drift/app_database.dart';
+import 'package:gpt_client/src/core/di/app_dependencies.dart';
+import 'package:gpt_client/src/core/di/shared_parent.dart';
+import 'package:gpt_client/src/core/repository/configuration_repository.dart';
+import 'package:gpt_client/src/feature/app/di/core_dependencies.dart';
+import 'package:gpt_client/src/feature/app/di/feature_dependencies.dart';
 import 'package:mark/mark.dart';
 import 'package:shared_preferences/shared_preferences.dart';
 import 'package:typed_preferences/typed_preferences.dart';

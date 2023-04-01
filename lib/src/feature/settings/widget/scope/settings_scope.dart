@@ -1,9 +1,9 @@
-import 'package:ai_client/src/core/extension/extensions.dart';
-import 'package:ai_client/src/core/widget/bloc_scope.dart';
-import 'package:ai_client/src/feature/settings/bloc/settings_bloc.dart';
-import 'package:ai_client/src/feature/settings/enum/app_theme.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:gpt_client/src/core/extension/extensions.dart';
+import 'package:gpt_client/src/core/widget/bloc_scope.dart';
+import 'package:gpt_client/src/feature/settings/bloc/settings_bloc.dart';
+import 'package:gpt_client/src/feature/settings/enum/app_theme.dart';
 import 'package:pure/pure.dart';
 
 AppTheme _theme(SettingsState state) => state.data.theme;
