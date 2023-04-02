@@ -102,22 +102,47 @@ class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
       showCupertinoModalPopup<CupertinoActionSheet>(
         context: pageContext,
         builder: (context) => CupertinoActionSheet(
-          message: const Text('Are you want to clear history?'),
+          message: const Text(
+            'Are you want to clear history?',
+            style: TextStyle(
+              fontWeight: FontWeight.w400,
+              fontSize: 15,
+            ),
+          ),
           cancelButton: CupertinoActionSheetAction(
             isDefaultAction: true,
             onPressed: () => Navigator.pop(context),
-            child: const Text('Cancel'),
+            child: Text(
+              'Cancel',
+              style: TextStyle(
+                fontWeight: FontWeight.w400,
+                fontSize: 17,
+                color: Theme.of(context).primaryColor,
+              ),
+            ),
           ),
           actions: [
             CupertinoActionSheetAction(
               isDestructiveAction: true,
-              onPressed: () {
-                Navigator.pop(context);
-                ChatScope.clearMessage(pageContext);
-              },
-              child: const Text('Clear'),
+              onPressed: () => clearMessagesAndPopDialog(context, pageContext),
+              child: const Text(
+                'Clear',
+                style: TextStyle(
+                  fontWeight: FontWeight.w400,
+                  fontSize: 17,
+                  color: CupertinoColors.systemRed,
+                ),
+              ),
             )
           ],
         ),
       );
+
+  void clearMessagesAndPopDialog(
+    BuildContext context,
+    BuildContext pageContext,
+  ) {
+    Navigator.pop(context);
+    ChatScope.clearMessages(pageContext);
+  }
 }

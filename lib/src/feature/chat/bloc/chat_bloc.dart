@@ -1,5 +1,6 @@
 import 'dart:async';
 
+import 'package:dart_openai/openai.dart';
 import 'package:freezed_annotation/freezed_annotation.dart';
 import 'package:gpt_client/src/feature/chat/bloc/chat_dependencies.dart';
 import 'package:gpt_client/src/feature/chat/model/chat_data.dart';
@@ -51,14 +52,16 @@ class ChatBloc extends StreamBloc<ChatEvent, ChatState> {
       yield ChatState.updatedSuccessfully(
         data: _dependencies.chatRepository.currentData(),
       );
+    } on RequestFailedException catch (e) {
+      yield ChatState.error(
+        data: _data,
+        error: e.message,
+      );
     } on Object catch (e) {
       yield ChatState.error(
         data: _data,
         error: e.toString(),
       );
-      rethrow;
-    } finally {
-      yield ChatState.idle(data: _data);
     }
   }
 }

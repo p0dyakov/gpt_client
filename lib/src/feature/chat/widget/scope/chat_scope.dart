@@ -28,7 +28,7 @@ class ChatScope extends StatelessWidget {
     _scope.add(context, ChatEvent.sendMessage(text));
   }
 
-  static void clearMessage(BuildContext context) {
+  static void clearMessages(BuildContext context) {
     _scope.add(context, const ChatEvent.clearMessages());
   }
 
