@@ -6,7 +6,7 @@ import 'package:gpt_client/src/core/resources/sizes.dart';
 import 'package:gpt_client/src/feature/chat/widget/scope/chat_scope.dart';
 
 class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
-  static const double _preferredHeight = 90;
+  static const double _preferredHeight = 110;
   final bool isTyping;
 
   const ChatAppBar({required this.isTyping, super.key});
@@ -32,7 +32,7 @@ class ChatAppBar extends StatelessWidget implements PreferredSizeWidget {
           height: _preferredHeight,
           child: Padding(
             padding: const EdgeInsets.only(
-              top: 38,
+              top: 58,
               left: kDefaultPadding,
               right: kDefaultPadding,
             ),

@@ -93,8 +93,7 @@ class _ChatPageState extends State<ChatPage> {
                       ),
                     ),
                     theme: ui.DefaultChatTheme(
-                      backgroundColor:
-                          Theme.of(context).scaffoldBackgroundColor,
+                      backgroundColor: Theme.of(context).scaffoldBackgroundColor,
 
                       /// MESSAGES
                       messageInsetsHorizontal: 10,
@@ -120,13 +119,13 @@ class _ChatPageState extends State<ChatPage> {
                       inputBackgroundColor: Colors.white,
                       inputTextColor: Colors.black,
                       inputTextCursorColor: Theme.of(context).primaryColor,
-                      inputPadding: EdgeInsets.only(
+                      inputPadding: const EdgeInsets.only(
                         left: 10,
                         right: 10,
                         top: 7,
-                        bottom: MediaQuery.of(context).viewInsets.bottom != 0
-                            ? 7
-                            : 30,
+                        // bottom: MediaQuery.of(context).viewInsets.bottom != 0
+                        //     ? 7
+                        //     : 30,
                       ),
                       inputTextStyle: const TextStyle(
                         fontSize: 14,
@@ -170,8 +169,7 @@ class _ChatPageState extends State<ChatPage> {
                       sendButtonMargin: EdgeInsets.zero,
                       sendButtonIcon: Container(
                         decoration: BoxDecoration(
-                          borderRadius:
-                              const BorderRadius.all(Radius.circular(14)),
+                          borderRadius: const BorderRadius.all(Radius.circular(14)),
                           color: Theme.of(context).primaryColor,
                         ),
                         padding: const EdgeInsets.all(2),
