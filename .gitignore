@@ -32,7 +32,6 @@
 pubspec.lock
 
 # Web related
-lib/generated_plugin_registrant.dart
 
 # Symbolication related
 app.*.symbols
@@ -42,12 +41,15 @@ app.*.map.json
 
 # Code generation
 **/*.g.dart
-# **/*.gr.dart
+**/*.gr.dart
 **/*.gen.dart
 **/*.freezed.dart
 **/*.select.dart
+**/*.swagger.dart
+**/*.chopper.dart
+lib/src/core/gen/swagger/output/**
+lib/src/core/gen/l10n/**
+coverage/**
 
 # Flutter Version Manager related
 .fvm/flutter_sdk
-
-coverage/

@@ -2,7 +2,6 @@
 
 .PHONY: help
 
-# Script description and usage through `make` or `make help` commands
 help:
 	@echo "Make something good"
 	@echo " or something worse"
